@@ -5,6 +5,28 @@ Ingeniería de Sistemas · Computación en la Nube · Profesor Jhon F Linares A.
 
 La carpeta `soporte_nube` contiene `app.py` y `requirements.txt` directamente en su raíz, como exige el taller. Suba el **contenido de esta carpeta** al repositorio. No suba la carpeta contenedora con otra carpeta `soporte_nube` dentro.
 
+## Despliegue del Equipo 07
+
+| Dato | Valor |
+| --- | --- |
+| Integrante | David Ospina |
+| URL pública | https://soporte-web-equipo007.onrender.com |
+| Comprobación de conexión | https://soporte-web-equipo007.onrender.com/health |
+| Servicio web | `soporte-web-equipo07` (Render, plan Free) |
+| Base de datos | `soporte-db-equipo07` (Render PostgreSQL 18, plan Free) |
+| Región | Oregon (US West), la misma para ambos servicios |
+| Commit inicial | `0c00b4a` |
+| Commit final de la aplicación | `43652f0` (encabezado "Soporte del laboratorio Equipo 07") |
+| Creación de PostgreSQL | 27/10/2026 |
+| Caducidad de PostgreSQL | 26/11/2026 (30 días, plan Free) |
+
+Notas de esta ejecución:
+
+- Render asignó el subdominio `soporte-web-equipo007` aunque el servicio se llama `soporte-web-equipo07`.
+- En Windows con varias versiones de Python, crear el entorno con `py -3.12 -m venv .venv` (comprobar con `py -0`).
+- Local usa la External Database URL en `.env`; Render usa la Internal Database URL en sus variables. Ambas con `sslmode=require`.
+- Los datos son ficticios. Después de la evaluación se eliminarán el servicio web y la base.
+
 ## 1. Archivos
 
 - `app.py`: configuración, modelo `Solicitud`, rutas y comando `init-db`.
